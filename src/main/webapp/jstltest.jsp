@@ -21,6 +21,7 @@
 	<h3>Section 2</h3>
 	<!-- forEach iterates over a collection of values -->
 	<c:forEach var="count" begin="1" end="10" step="1">
+		<!--  if tag testing and outputing only if test passes (in this case, for even values of count -->
 		<c:if test="${ (count % 2) == 0 }">
 			<p>${count} is an even number!</p>
 		</c:if>
@@ -30,6 +31,7 @@
 	<h3>Section 3</h3>
 	<c:set scope="page" var="week">Sun-Mon-Tue-Wed-Thu-Fri-Sat</c:set>
 	<select>
+		<!--  forTokens iterates over a string list delimited by commas or a specified character -->
 		<c:forTokens items="${week}" delims="-" var="day">
 			<option value="${day}"> ${day} </option>
 		</c:forTokens>
